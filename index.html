@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spline+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Simple Chat</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="chat">
+        <ul id="messages_list">
+          <li class="message message_right">
+            Lorem ipsum
+            <span class="timestamp">17:53</span>
+          </li>
+          <li class="message message_left">
+            Lorem ipsum
+            <span class="timestamp">17:56</span>
+          </li>
+          <li class="message message_left">
+            Lorem ipsum dolor elit. Lorem ipsum dolor elit. Lorem ipsum dolor
+            elit. Lorem ipsum dolor elit.
+            <span class="timestamp">18:01</span>
+          </li>
+          <li class="message message_right">
+            Lorem ipsum Lorem ipsum dolor elit. Lorem ipsum dolor elit. Lorem
+            ipsum dolor elit.
+            <span class="timestamp">18:03</span>
+          </li>
+          <li class="message message_left">
+            Lorem ipsum
+            <span class="timestamp">18:24</span>
+          </li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <form id="message_form">
+        <textarea id="message_form_textarea"></textarea>
+        <button id="send_message"></button>
+      </form>
+    </div>
+    <!--  -->
+    <script src="app.js"></script>
+  </body>
+</html>

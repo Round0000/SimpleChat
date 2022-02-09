@@ -1,0 +1,111 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Spline Sans", sans-serif;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.container {
+  width: 50vw;
+  margin: 2em auto;
+  border: 1px solid #ddd;
+  padding: 1em;
+  min-width: 280px;
+}
+
+#messages_list {
+  list-style: none;
+}
+
+.message {
+  border-radius: 4px;
+  padding: 0.5em 0.75em;
+  min-width: 50%;
+  margin-bottom: 0.25em;
+  box-shadow: 1px 2px 2px #0003;
+  display: flex;
+  flex-direction: column;
+  max-width: 14em;
+}
+
+.message::selection,
+.message span::selection {
+  background-color: #fcd34d;
+  color: #000;
+}
+
+.message_right {
+  margin-left: auto;
+  background: linear-gradient(-15deg, #bae6fd, #e0f2fe);
+  color: #000;
+  transform: translateX(2em);
+  border-top-right-radius: 0;
+}
+
+.message_left {
+  transform: translateX(-2em);
+  background: linear-gradient(-15deg, #0ea5e9, #0284c7);
+  color: white;
+  border-top-left-radius: 0;
+}
+
+.message_left + .message_right,
+.message_right + .message_left {
+  margin-top: 1em;
+}
+
+.timestamp {
+  align-self: flex-end;
+  font-size: 0.8em;
+}
+
+hr {
+  display: block;
+  border-color: transparent;
+  background-color: #0284c7;
+  margin: 3em auto 1em;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  border-radius: 3px;
+  opacity: 0.4;
+}
+
+#message_form {
+  display: flex;
+  align-items: center;
+}
+
+#message_form_textarea {
+  flex: 1;
+  background: #f0f9ff;
+  resize: none;
+  border: none;
+  padding: 0.5em;
+  font-family: inherit;
+  box-shadow: inset 1px 1px 3px #0369a155;
+  border-radius: 3px;
+}
+
+#message_form_textarea:focus {
+  outline: 2px solid #0369a155;
+  outline-offset: -1px;
+}
+
+#send_message {
+  background: url("https://cdn-icons-png.flaticon.com/128/736/736110.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  width: 2em;
+  height: 2em;
+  margin-left: 1em;
+  cursor: pointer;
+}
