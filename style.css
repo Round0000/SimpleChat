@@ -14,10 +14,24 @@ body {
 
 .container {
   width: 50vw;
-  margin: 2em auto;
-  border: 1px solid #ddd;
-  padding: 1em;
+  margin: 2em auto 1em;
+  padding: 2em;
   min-width: 280px;
+  height: 80vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.container::-webkit-scrollbar {
+  background: transparent;
+  width: 0;
+}
+
+#chat {
+  border: 1px solid #ddd;
+  padding: 0.5em;
+  position: relative;
 }
 
 #messages_list {
@@ -101,11 +115,30 @@ hr {
 
 #send_message {
   background: url("https://cdn-icons-png.flaticon.com/128/736/736110.png");
-  background-size: contain;
+  background-size: 70%;
+  background-position: 60% 50%;
   background-repeat: no-repeat;
   border: none;
-  width: 2em;
-  height: 2em;
+  width: 3em;
+  height: 3em;
   margin-left: 1em;
   cursor: pointer;
+  outline: 1px solid transparent;
+    background-color: white;
+  border-radius: 100%;
+  transition: all 0.2s;
+  box-shadow: 1px 1px 2px #0005;
+}
+
+#send_message:focus {
+  outline-color: #0369a155;
+  background-size: 60%;
+  background-color: #f0f9ff;
+  box-shadow: none;
+  transform: translateY(-2px);
+}
+
+#send_message:active {
+    outline-color: dodgerblue;
+    transform: translateY(2px);
 }
