@@ -51,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 14em;
+  transition: all 0.5s;
 }
 
 .message::selection,
@@ -77,6 +78,10 @@ body {
 .message_left + .message_right,
 .message_right + .message_left {
   margin-top: 1em;
+}
+
+.message_out {
+  opacity: 0.2;
 }
 
 .timestamp {
@@ -119,30 +124,28 @@ hr {
 
 #send_message {
   background: url("https://cdn-icons-png.flaticon.com/128/736/736110.png");
-  background-size: 60%;
+  background-size: 50%;
   background-position: 60% 50%;
   background-repeat: no-repeat;
-  border: none;
+  border: 1px solid #0369a155;
   width: 3.5em;
   height: 3.5em;
   margin-left: 1em;
   cursor: pointer;
   outline: 1px solid transparent;
   outline-offset: 2px;
-    background-color: white;
+  background-color: white;
   border-radius: 100%;
   transition: all 0.1s;
-  box-shadow: 1px 1px 2px #0005;
 }
 
 #send_message:focus,
 #send_message:hover {
   outline-color: #0369a133;
   box-shadow: none;
-  transform: translateY(-2px) scale(.9);
+  background-size: 60%;
 }
 
 #send_message:active {
-    outline-color: dodgerblue;
-    transform: translateY(2px);
+  outline-color: dodgerblue;
 }
