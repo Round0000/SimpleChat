@@ -9,9 +9,11 @@ message_form.addEventListener("submit", (e) => {
 message_form.addEventListener("keyup", (e) => {
   if (e.key === "Enter" && !e.shiftKey) {
     console.log(message_form_textarea.value.length);
-    if (message_form_textarea.value.length <= 1) return;
-
-    updateChatUI(message_form_textarea.value);
+    if (message_form_textarea.value.length <= 1) {
+      message_form.reset();
+    } else {
+      updateChatUI(message_form_textarea.value);
+    }
   }
 });
 
