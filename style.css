@@ -18,10 +18,12 @@ body {
   padding: 2em;
   min-width: 280px;
   max-width: 40em;
-  height: 80vh;
+  height: max-content;
+  max-height: 80vh;
   overflow-y: auto;
   overflow-x: hidden;
   position: relative;
+  background: linear-gradient(to top, #bae6fd55, transparent 16em);
 }
 
 .container::-webkit-scrollbar {
@@ -33,6 +35,7 @@ body {
   border: 1px solid #ddd;
   padding: 0.5em;
   position: relative;
+  background-color: white;
 }
 
 #messages_list {
@@ -100,7 +103,7 @@ hr {
 
 #message_form_textarea {
   flex: 1;
-  background: #f0f9ff;
+  background: white;
   resize: none;
   border: none;
   padding: 0.5em;
@@ -116,27 +119,27 @@ hr {
 
 #send_message {
   background: url("https://cdn-icons-png.flaticon.com/128/736/736110.png");
-  background-size: 70%;
+  background-size: 60%;
   background-position: 60% 50%;
   background-repeat: no-repeat;
   border: none;
-  width: 3em;
-  height: 3em;
+  width: 3.5em;
+  height: 3.5em;
   margin-left: 1em;
   cursor: pointer;
   outline: 1px solid transparent;
+  outline-offset: 2px;
     background-color: white;
   border-radius: 100%;
-  transition: all 0.2s;
+  transition: all 0.1s;
   box-shadow: 1px 1px 2px #0005;
 }
 
-#send_message:focus {
-  outline-color: #0369a155;
-  background-size: 60%;
-  background-color: #f0f9ff;
+#send_message:focus,
+#send_message:hover {
+  outline-color: #0369a133;
   box-shadow: none;
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(.9);
 }
 
 #send_message:active {
