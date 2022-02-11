@@ -149,3 +149,11 @@ hr {
 #send_message:active {
   outline-color: dodgerblue;
 }
+
+#author_name {
+  display: block;
+  margin: 1em auto;
+  font-family: inherit;
+  padding: .25em .5em;
+  width: 14em;
+}
